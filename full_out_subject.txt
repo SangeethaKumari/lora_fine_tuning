@@ -1,0 +1,57 @@
+(lora-ft) [devops@ansatz lora_ft]$ uv run src/svlearn_lora_ft_subject_chunks/full_ft.py 
+WARNING:root:No configuration file specified. Trying the default location
+WARNING:root:Loading configuration from /home/devops/shubeeksh/ai_agents_bootcamp/lora_ft/config.yaml if it exists
+{'cohort': 'Spring 2025', 'final-ft-model-paths': {'sentiment_model_lora_peft': '/home/devops/shubeeksh/lora_ft_op/peft', 'sentiment_model_dir': '/home/devops/shubeeksh/lora_ft_op/full', 'subject_model_dir': '/home/devops/shubeeksh/lora_ft_op/full', 'eval_output_dir': '/home/devops/shubeeksh/lora_ft_op'}}
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 48.0/48.0 [00:00<00:00, 176kB/s]
+vocab.txt: 232kB [00:00, 10.7MB/s]
+tokenizer.json: 466kB [00:00, 13.0MB/s]
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 483/483 [00:00<00:00, 2.10MB/s]
+model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 268M/268M [00:02<00:00, 94.7MB/s]
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert/distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 43497/43497 [01:37<00:00, 447.12 examples/s]
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10875/10875 [00:23<00:00, 454.27 examples/s]
+/home/devops/shubeeksh/ai_agents_bootcamp/lora_ft/src/svlearn_lora_ft_subject_chunks/full_ft.py:198: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Starting FULL fine-tuning of DistilBERT for subject classification...
+{'loss': 0.1489, 'grad_norm': 0.0417238287627697, 'learning_rate': 1.877651097217114e-05, 'epoch': 0.18}                                                                                          
+{'loss': 0.0729, 'grad_norm': 0.35874179005622864, 'learning_rate': 1.7550570062522987e-05, 'epoch': 0.37}                                                                                        
+{'loss': 0.0637, 'grad_norm': 0.07950693368911743, 'learning_rate': 1.6324629152874833e-05, 'epoch': 0.55}                                                                                        
+{'loss': 0.0546, 'grad_norm': 0.05309666320681572, 'learning_rate': 1.5098688243226678e-05, 'epoch': 0.74}                                                                                        
+{'loss': 0.0478, 'grad_norm': 0.08212122321128845, 'learning_rate': 1.3872747333578522e-05, 'epoch': 0.92}                                                                                        
+{'eval_loss': 0.03916734457015991, 'eval_accuracy': 0.9910804597701149, 'eval_precision': 0.9911815036040386, 'eval_recall': 0.9910804597701149, 'eval_f1': 0.9910742177563246, 'eval_runtime': 16.392, 'eval_samples_per_second': 663.433, 'eval_steps_per_second': 20.742, 'epoch': 1.0}                                                                                                          
+{'loss': 0.0403, 'grad_norm': 0.1070249006152153, 'learning_rate': 1.2646806423930366e-05, 'epoch': 1.1}                                                                                          
+{'loss': 0.037, 'grad_norm': 1.5591797828674316, 'learning_rate': 1.1420865514282214e-05, 'epoch': 1.29}                                                                                          
+{'loss': 0.0373, 'grad_norm': 4.291691780090332, 'learning_rate': 1.0194924604634058e-05, 'epoch': 1.47}                                                                                          
+{'loss': 0.0372, 'grad_norm': 0.16617590188980103, 'learning_rate': 8.968983694985902e-06, 'epoch': 1.66}                                                                                         
+{'loss': 0.0314, 'grad_norm': 0.0024108102079480886, 'learning_rate': 7.743042785337748e-06, 'epoch': 1.84}                                                                                       
+{'eval_loss': 0.040043625980615616, 'eval_accuracy': 0.9919080459770115, 'eval_precision': 0.9919654677871873, 'eval_recall': 0.9919080459770115, 'eval_f1': 0.9919024822854684, 'eval_runtime': 16.3773, 'eval_samples_per_second': 664.03, 'eval_steps_per_second': 20.76, 'epoch': 2.0}                                                                                                          
+{'loss': 0.0331, 'grad_norm': 0.003171065589413047, 'learning_rate': 6.517101875689592e-06, 'epoch': 2.02}                                                                                        
+{'loss': 0.0252, 'grad_norm': 1.5029371976852417, 'learning_rate': 5.291160966041437e-06, 'epoch': 2.21}                                                                                          
+{'loss': 0.0317, 'grad_norm': 0.16059592366218567, 'learning_rate': 4.065220056393282e-06, 'epoch': 2.39}                                                                                         
+{'loss': 0.0263, 'grad_norm': 0.03188753500580788, 'learning_rate': 2.839279146745127e-06, 'epoch': 2.57}                                                                                         
+{'loss': 0.0251, 'grad_norm': 0.08017013967037201, 'learning_rate': 1.6133382370969721e-06, 'epoch': 2.76}                                                                                        
+{'loss': 0.0325, 'grad_norm': 0.07093316316604614, 'learning_rate': 3.87397327448817e-07, 'epoch': 2.94}                                                                                          
+{'eval_loss': 0.03646612539887428, 'eval_accuracy': 0.9926436781609196, 'eval_precision': 0.992689792565206, 'eval_recall': 0.9926436781609196, 'eval_f1': 0.9926430022766473, 'eval_runtime': 16.3802, 'eval_samples_per_second': 663.91, 'eval_steps_per_second': 20.757, 'epoch': 3.0}                                                                                                           
+{'train_runtime': 663.5816, 'train_samples_per_second': 196.647, 'train_steps_per_second': 12.292, 'train_loss': 0.046120515769349606, 'epoch': 3.0}                                              
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8157/8157 [11:03<00:00, 12.29it/s]
+Fully fine-tuned subject classification model saved to: /home/devops/shubeeksh/lora_ft_op/full/best_model
+Training started at: Tue Sep 23 04:18:26 2025
+Training ended at: Tue Sep 23 04:29:29 2025
+Total training time: 0h 11m 3s
+
+================================================================================
+FULL FINE-TUNING COMPLETED SUCCESSFULLY!
+================================================================================
+Key characteristics of this approach:
+1. ALL model parameters were updated (~66M parameters)
+2. Higher computational and memory requirements
+3. Longer training time compared to LoRA
+4. Generally better performance potential
+5. Larger final model size
+6. Risk of catastrophic forgetting
+
+Compare this with LoRA approaches:
+- LoRA: ~1-5M trainable parameters, faster training, smaller models
+- Full FT: ~66M trainable parameters, slower training, larger models
+================================================================================

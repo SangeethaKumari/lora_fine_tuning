@@ -1,0 +1,3 @@
+datasets>=3.5.0
+peft>=0.15.1
+svlearn-bootcamp>=0.1.7

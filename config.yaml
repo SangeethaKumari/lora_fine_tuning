@@ -1,0 +1,22 @@
+#-------------------------------------------------------------------------------------------
+#  Copyright (c) 2016-2025.  SupportVectors AI Lab
+#
+#  This code is part of the training material, and therefore part of the intellectual property.
+#  It may not be reused or shared without the explicit, written permission of SupportVectors.
+#
+#  Use is limited to the duration and purpose of the training at SupportVectors.
+#
+#  Author: SupportVectors AI Training
+#-------------------------------------------------------------------------------------------
+
+cohort: Spring 2025
+
+dataset-paths:
+  history_file: /home/devops/shubeeksh/repositories/ai_agents_bootcamp/lora_ft_subject_chunks/chunks/3_000000_000000.json
+  physics_file: /home/devops/shubeeksh/repositories/ai_agents_bootcamp/lora_ft_subject_chunks/chunks/3_000001_000000.json
+  biology_file: /home/devops/shubeeksh/repositories/ai_agents_bootcamp/lora_ft_subject_chunks/chunks/3_000002_000000.json
+
+final-ft-model-paths:
+  subject_model_lora_peft: /home/devops/shubeeksh/outputs/lora_ft_op/peft
+  subject_model_dir: /home/devops/shubeeksh/outputs/lora_ft_op/full
+  eval_output_dir: /home/devops/shubeeksh/outputs/lora_ft_op
